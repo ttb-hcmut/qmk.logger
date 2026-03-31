@@ -7,6 +7,6 @@ distribution
 then no additional setup is required,
 this program is usable as-is:
   ```sh
-# assuming that you've cloned this repository into a subfolder qmk.logger in ~/Downloads directory
-~/Downloads/qmk.logger
+# assuming that the repository was downloaded as a ZIP archive into ~/Downloads directory
+~/Downloads/qmk.logger-main.zip
 ```
