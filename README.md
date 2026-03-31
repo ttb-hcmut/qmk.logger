@@ -7,8 +7,8 @@ TODO(kinten): convert to pdf
 If you are using the ~kinten/u/utop distribution [^utopk] then no additional setup is required, this program is usable as-is:
 
 ```sh
-# assuming that the ZIP archive is in ~/Downloads directory
-~/Downloads/qmk.logger-main.zip
+# assuming that you've cloned this repository into a subfolder qmk.logger in ~/Downloads directory
+~/Downloads/qmk.logger
 ```
 
 [^utopk]: https://baorepo.web.app/~kinten/u/utop
