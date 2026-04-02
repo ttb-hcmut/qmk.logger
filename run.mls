@@ -4,7 +4,7 @@
 -require eio_main;;
 -require cstruct;;
 -require ppx_cstruct;;
-[@@@module "%/../lib_evdev.ml" [@prefixed "lib_"]]
+[@@@module "%/../lib_evdev.ml" [@prefixed? "lib_"]]
 open Eio
 
 let () =
