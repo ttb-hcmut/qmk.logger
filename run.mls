@@ -9,7 +9,7 @@ open Eio
 
 let () =
   Eio_main.run @@ fun env ->
-  Evdev.Input.with_open_in (Eio.Stdenv.fs env) "event3" @@ fun dev ->
+  Evdev.Input.with_open_in (Stdenv.fs env) "event3" @@ fun dev ->
   let from_dev = Buf_read.of_flow ~max_size:1_000_000 dev in
   Evdev.Buf_read.input_events from_dev |> Seq.iter (fun (_, type_, code, _value) ->
     if type_ <> 1 then () else
