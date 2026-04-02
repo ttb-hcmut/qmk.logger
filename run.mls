@@ -4,14 +4,14 @@
 -require eio_main;;
 -require cstruct;;
 -require ppx_cstruct;;
--mod_use "%/../lib_evdev.ml";;
-module Evdev = Lib_evdev
+[@@@module "%/../lib_evdev.ml" [@prefixed "lib_"]]
+open Eio
 
 let () =
   Eio_main.run @@ fun env ->
   Evdev.Input.with_open_in (Eio.Stdenv.fs env) "event3" @@ fun dev ->
-  let from_dev = Eio.Buf_read.of_flow ~max_size:1_000_000 dev in
+  let from_dev = Buf_read.of_flow ~max_size:1_000_000 dev in
   Evdev.Buf_read.input_events from_dev |> Seq.iter (fun (_, type_, code, _value) ->
     if type_ <> 1 then () else
-    Eio.traceln "qmk.logger: got type '%d' code '%d' value '%d'" type_ code (Int32.to_int _value);
+    traceln "qmk.logger: got type '%d' code '%d' value '%d'" type_ code (Int32.to_int _value);
   )
