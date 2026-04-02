@@ -1,6 +1,6 @@
 utopk:
   type: Repository
   title: The ~kinten/u/utop OCaml distribution
-  url: "https://baorepo.web.app/~kinten/u/utop"
+  url: https\://baorepo.web.app/~kinten/u/utop
   author: Kinten Le
   date: 2024
