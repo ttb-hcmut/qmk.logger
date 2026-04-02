@@ -1,11 +1,11 @@
-type%cstruct [@host_endian] timeval =
-  { a : int64_t; b : int64_t }
-
-type%cstruct [@host_endian] input_event =
-  { type_ : uint16_t; code : uint16_t; value : int32_t }
-
 module Buf_read =
   struct open Eio.Buf_read
+
+  type%cstruct [@host_endian] timeval =
+    { a : int64_t; b : int64_t }
+
+  type%cstruct [@host_endian] input_event =
+    { type_ : uint16_t; code : uint16_t; value : int32_t }
 
   let input_event : _ parser = fun it ->
     let sizeof_this = sizeof_timeval + sizeof_input_event in
