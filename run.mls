@@ -1,5 +1,5 @@
 #!/usr/bin/unfold ~/u/utop
-(* vi: ft=ocaml: *)
+(* vi: set ft=ocaml: *)
 -require eio;;
 -require eio_main;;
 -require cstruct;;
