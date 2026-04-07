@@ -1,0 +1,21 @@
+#!/usr/bin/unfold ~/u/blueprint-execute/v2.4
+using Gtk 4.0;
+using Adw 1;
+using Webkit 6.0;
+
+Adw.Window {
+	Adw.ToastOverlay toaster {
+		Overlay {
+			[overlay]
+			Adw.HeaderBar {
+
+			}
+
+			Box {
+				$HTMLView webview {
+					content-url: "";
+				}
+			}
+		}
+	}
+}

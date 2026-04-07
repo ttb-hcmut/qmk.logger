@@ -1,0 +1,16 @@
+// vi: set ft=javascript:
+import "~/u/libformal";
+
+let kbdview = workbench.get("kbdview");
+
+workbench.oncomputed(it => {
+	switch (it.kind) {
+		case "Qmk.is_capitalized": break;
+		case "Qmk.keysheld": kbdview.send(); break;
+		default: throw new Error;
+	}
+});
+
+workbench.register_action(function switchtabs {
+	workbench.inject({})
+});
