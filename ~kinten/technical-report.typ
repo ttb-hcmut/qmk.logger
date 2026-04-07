@@ -17,4 +17,4 @@ chmod +x ~/Downloads/qmk.logger-main.zip;
 
 == Bibliography
 
-#bibliography(title: none, "../../qmk.logger/~kinten/works.yml")
+#bibliography(title: none, "works.yml")
