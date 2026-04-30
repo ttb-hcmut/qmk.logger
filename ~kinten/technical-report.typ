@@ -29,6 +29,8 @@ Refer to @design-of for more details.
   a("H"); a("J"); a("K"); a("L")
 })
 
+// it is preferrable that we can define keyboard by UX function semantics. in practice this is usually pretty hard, so we also enable define keyboard by shape semantics, and Reason is perfect for this because it reifies JSX syntax. On retrospective, these are known as f-rep and b-rep respectively, and there's much literature on them in the field of CAD which is somewhat relevant to this subject. In the end, we are reminded of the general-purposity spirit of our parent language OCaml, and decided that both methodologies should be supported.
+
 = Distribution
 
 Under the `~kinten/u/utop` distribution @utopk then no additional setup is required, this program is usable as-is:
