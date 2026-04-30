@@ -1,6 +1,6 @@
 #!/usr/bin/unfold ~/u/utop
-(* vi: set ft=ocaml: *)
 -require' [eio; eio_main; cstruct; ppx_cstruct];;
+(* vi: set ft=ocaml: *)
 [@@@module "%/../lib_evdev.ml" [@prefixed? "lib_"]]
 open Eio
 
