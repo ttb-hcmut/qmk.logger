@@ -1,16 +1,15 @@
-// vi: set ft=javascript:
-import "~/u/libformal";
+[@@@module [%unfold "~/u/libformal"]]
+let kbdview = Workbench.get "kbdview"
 
-let kbdview = workbench.get("kbdview");
+let () =
+  Workbench.on_computed @@ fun it ->
+  match it#kind with
+  | "Qmk.is_capitalized" -> ()
+  | "Qmk.keysheld" -> kbdview#send ()
+  | _ -> raise Not_found
 
-workbench.oncomputed(it => {
-	switch (it.kind) {
-		case "Qmk.is_capitalized": break;
-		case "Qmk.keysheld": kbdview.send(); break;
-		default: throw new Error;
-	}
-});
+let () =
+  Workbench.register_action @@ Js.func "switchtabs" @@ fun
+  Workbench.inject ()
 
-workbench.register_action(function switchtabs {
-	workbench.inject({})
-});
+(* vi: set ft=ocaml: *)
