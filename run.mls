@@ -1,6 +1,5 @@
 #!/usr/bin/unfold ~/u/utop
 -require' [eio; eio_main; cstruct; ppx_cstruct];;
-(* vi: set ft=ocaml: *)
 [@@@module "%/../lib_evdev.ml" [@prefixed? "lib_"]]
 open Eio
 
@@ -12,3 +11,5 @@ let () =
     if type_ <> 1 then () else
     traceln "qmk.logger: got type '%d' code '%d' value '%d'" type_ code (Int32.to_int _value);
   )
+
+(* vi: set ft=ocaml: *)
