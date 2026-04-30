@@ -10,3 +10,7 @@ If you are using the ~kinten/u/utop distribution [^utopk] then no additional set
 ```
 
 [^utopk]: https://baorepo.web.app/~kinten/u/utop
+
+*Made with love for Sofle.*
+
+![](./sofle__right.jpg)
