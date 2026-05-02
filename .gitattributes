@@ -1,1 +1,2 @@
 *.mls linguist-language=OCaml
+*.typ linguist-documentation=true
